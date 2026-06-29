@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffe5ec, #ffc2d1);
+            /* min-height use karne sy content top par touch nahi hoga aur spacing barkarar rahegi */
+            min-height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #4a4a4a;
+            padding: 40px 20px; /* Top aur bottom par extra safe spacing */
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            color: #ff4d6d;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #666;
+        }
+
+        .sorry-btn {
+            background-color: #ff758f;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 5px 15px rgba(255, 117, 143, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .sorry-btn:hover {
+            background-color: #ff4d6d;
+            box-shadow: 0 7px 20px rgba(255, 77, 109, 0.6);
+            transform: scale(1.05);
+        }
+
+        .hidden-message {
+            display: none;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px dashed #ffe5ec;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .hidden-message p {
+            color: #ff4d6d;
+            font-style: italic;
+            font-weight: 600;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>I am Really Sorry meri jaan! 🥺</h1>
+        <p>Hey, I value our friendship more than anything. My behavior wasn't right, and I feel terrible about it. Can we please make things right?  Humari dosti mere liye kisi bhi cheez se zyada barh kar hai. Main jaanti hoon mera behaviour theek nahi tha aur maine bina soche samjhe tumhara dil dukhaya. I am really, really sorry. Tumhare bina sab kuch adhoora lagta hai, please maan jao na? 🥺❤️</p>
+        
+        <button class="sorry-btn" onclick="revealMessage()">Click me i have a surprise for u</button>
+
+        <div class="hidden-message" id="secretMessage">
+            <p>I love u a lottttttttttttttttttt !🌸✨</p>
+        </div>
+    </div>
+
+    <script>
+        function revealMessage() {
+            var message = document.getElementById("secretMessage");
+            message.style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
